@@ -1,0 +1,98 @@
+/* CraftPanel — estilo oscuro gamer, sin frameworks */
+:root{
+  --bg:#0f1115;
+  --panel:#151923;
+  --muted:#9aa3b2;
+  --text:#e5e7eb;
+  --primary:#22c55e;
+  --danger:#ef4444;
+  --accent:#22d3ee;
+  --border:#232738;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial;
+  color:var(--text);
+  background:var(--bg);
+}
+
+.bg-grid{
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px),
+    radial-gradient(1200px 600px at 10% 10%, rgba(34,211,238,.06), transparent 50%),
+    radial-gradient(1000px 500px at 80% 20%, rgba(34,197,94,.06), transparent 50%);
+  background-size: 40px 40px, 40px 40px, auto, auto;
+}
+
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px; border-bottom:1px solid var(--border); background:rgba(15,17,21,.6);
+  backdrop-filter: blur(8px); position:sticky; top:0; z-index:50;
+}
+
+.brand{display:flex; align-items:center; gap:10px; font-weight:700}
+.brand-inline{gap:8px; margin-bottom:6px}
+.logo{width:32px; height:32px}
+
+.hero{max-width:900px; margin:80px auto; text-align:center; padding:0 16px}
+.hero h1{font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin:0 0 12px}
+.accent{color:var(--accent)}
+.cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+
+.container{max-width:1100px; margin:24px auto; padding:0 16px}
+.grid-2{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px}
+
+.card{
+  background:linear-gradient(180deg, rgba(35,39,56,.7), rgba(21,25,35,.7));
+  border:1px solid var(--border);
+  border-radius:16px; padding:16px; box-shadow:var(--shadow);
+}
+
+.btn{
+  appearance:none; border:1px solid var(--border); background:#111420; color:var(--text);
+  padding:10px 14px; border-radius:999px; cursor:pointer; font-weight:600;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:linear-gradient(90deg, #16a34a, #22c55e); border-color:#1b7a42; color:white}
+.btn-danger{background:linear-gradient(90deg, #dc2626, #ef4444); border-color:#b91c1c; color:white}
+
+.form{display:grid; gap:10px}
+.form label{display:grid; gap:6px; font-size:14px}
+.form input, .form select{
+  background:#0d1018; border:1px solid var(--border); color:var(--text);
+  padding:10px 12px; border-radius:12px; outline:none;
+}
+.form input:focus, .form select:focus{border-color:#344055; box-shadow:0 0 0 3px rgba(34,211,238,.2)}
+
+.auth-card{width:min(420px, 92vw)}
+.center{min-height:100vh; display:grid; place-items:center}
+
+.footer{border-top:1px solid var(--border); margin-top:24px; padding:18px; text-align:center; color:var(--muted)}
+
+.server-status{display:flex; align-items:center; gap:10px; margin-bottom:10px}
+.status-indicator{width:10px; height:10px; border-radius:999px; background:#777; border:1px solid #444}
+.status-up{background:#22c55e}
+.status-down{background:#ef4444}
+.kv{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px}
+.k{color:var(--muted)}
+.v{font-weight:700}
+
+.controls{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 6px}
+
+.console{
+  background:#0b0e15; border:1px solid var(--border); border-radius:12px;
+  min-height:160px; padding:10px; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  overflow:auto; white-space:pre-wrap;
+}
+.cmd-form{display:flex; gap:8px; margin-top:8px}
+.cmd-form input{flex:1}
+
+ul.info{margin:0; padding-left:18px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
