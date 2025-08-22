@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CraftPanel — Registro</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/favicon.svg">
+</head>
+<body class="bg-grid center">
+  <div class="card auth-card">
+    <div class="brand center brand-inline">
+      <img src="assets/img/logo.svg" class="logo" alt="CraftPanel" />
+      <h2>Crear cuenta</h2>
+    </div>
+    <form id="regForm" class="form">
+      <label>Usuario
+        <input type="text" id="regUser" required placeholder="Elige un usuario">
+      </label>
+      <label>Email
+        <input type="email" id="regEmail" required placeholder="tucorreo@ejemplo.com">
+      </label>
+      <label>Contraseña
+        <input type="password" id="regPass" required minlength="6" placeholder="Mínimo 6 caracteres">
+      </label>
+      <button class="btn btn-primary" type="submit">Registrarse</button>
+      <p class="muted">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </form>
+  </div>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    Auth.requireLoggedOut();
+    Auth.bindRegister();
+  </script>
+</body>
+</html>
