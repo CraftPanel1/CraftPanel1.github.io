@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CraftPanel — Login</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/favicon.svg">
+</head>
+<body class="bg-grid center">
+  <div class="card auth-card">
+    <div class="brand center brand-inline">
+      <img src="assets/img/logo.svg" class="logo" alt="CraftPanel" />
+      <h2>Iniciar sesión</h2>
+    </div>
+    <form id="loginForm" class="form">
+      <label>Usuario
+        <input type="text" id="loginUser" required placeholder="Tu usuario">
+      </label>
+      <label>Contraseña
+        <input type="password" id="loginPass" required placeholder="••••••••">
+      </label>
+      <button class="btn btn-primary" type="submit">Entrar</button>
+      <p class="muted">¿No tienes cuenta? <a href="register.html">Regístrate</a></p>
+    </form>
+  </div>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    Auth.requireLoggedOut();
+    Auth.bindLogin();
+  </script>
+</body>
+</html>
